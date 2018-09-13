@@ -45,4 +45,10 @@ public class QuickSort {
         swap(array, mid, right);
         return pivot;
     }
+
+    private static void swap(int arr[], int i, int j) {
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+    }
 }
