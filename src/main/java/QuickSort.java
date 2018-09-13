@@ -20,4 +20,23 @@ public class QuickSort {
             quickSort(array, left, border - 1);
         }
     }
+
+    private static int partitionArray(int[] array, int left, int right) {
+        int pivot = choosePivot(array, left, right);
+        int border = left - 1;
+        int i = left;
+
+        while(i < right){
+            if(array[i] < pivot) {
+                border++;
+                if(border != i) swap(array, border, i);
+            }
+            i++;
+        }
+
+        border++;
+        if(border != right) swap(array, border, right);
+        return border;
+    }
+
 }
