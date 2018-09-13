@@ -39,4 +39,10 @@ public class QuickSort {
         return border;
     }
 
+    private static int choosePivot(int[]array, int left, int right){
+        int mid = left + (right - left) / 2;
+        int pivot = array[mid];
+        swap(array, mid, right);
+        return pivot;
+    }
 }
